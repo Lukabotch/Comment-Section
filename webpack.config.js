@@ -1,6 +1,7 @@
 const { builtinModules } = require("module");
 const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
+const AddAssetHtmlPlugin = require("add-asset-html-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"),
@@ -21,6 +22,14 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },

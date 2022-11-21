@@ -9,9 +9,8 @@ const app = express();
 
 const compiler = webpack(config);
 
-app.use(
-  require("webpack-dev-middleware")(compiler));
-
+app.use(require("webpack-dev-middleware")(compiler));
+app.use("/images", express.static(path.join(__dirname, "..", "images")));
 app.listen(port, function (err) {
   if (err) {
     console.log(err);
