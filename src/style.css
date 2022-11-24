@@ -170,18 +170,6 @@ input[type="text"]:hover {
   align-items: flex-end;
   flex-direction: column;
 }
-.myWrittenComment {
-  display: flex;
-  margin: 10px auto;
-  min-width: 440px;
-  width: 100%;
-  min-height: 150px;
-  border-radius: 12px;
-  border: none;
-  background-color: hsl(0, 0%, 100%);
-  padding: 10px;
-}
-
 .replyClass {
   font-family: Rubik;
   font-weight: 500;
@@ -232,4 +220,22 @@ input[type="text"]:hover {
   background-color: hsl(238, 40%, 52%);
   cursor: pointer;
   transition: 0.3s;
+}
+.myWrittenComment{
+  display: flex;
+  justify-content: center;
+  width: 100% !important;
+}
+.replyComments{
+  width: 100%;
+}
+.myCommentWrite{
+  display: flex;
+  margin: 10px auto;
+  min-height: 150px;
+  min-width: 100% !important;
+  border-radius: 12px;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
 }
