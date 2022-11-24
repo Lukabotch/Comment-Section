@@ -9,13 +9,16 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Rubik;
+  justify-content: center;
+  width: 45%;
+  align-items: center;
 }
 .comment {
   display: flex;
   margin: 10px auto;
 
-  min-width: 550px;
-  width: 40%;
+  min-width: 440px;
+  width: 100%;
   min-height: 150px;
   border-radius: 12px;
   border: none;
@@ -67,6 +70,11 @@ body {
   color: hsl(211, 10%, 45%);
   font-size: 16px;
 }
+.paragraph span {
+  color: hsl(238, 40%, 52%);
+  font-family: Rubik;
+  font-weight: 500;
+}
 .dateAdded {
   color: hsl(211, 10%, 45%);
 }
@@ -76,8 +84,8 @@ img {
 .myComment {
   margin: 10px auto;
   justify-content: center;
-  min-width: 550px;
-  width: 40%;
+  min-width: 340px;
+  width: 45%;
   min-height: 130px;
   border-radius: 12px;
   border: none;
@@ -91,7 +99,19 @@ img {
   height: 100% !important;
   align-items: start;
 }
-.myTextarea{
+.myTextarea {
+  height: 100% !important;
+  min-height: 100px;
+  border-radius: 10px;
+  border: 1px solid hsl(211, 10%, 45%);
+  min-width: 60%;
+  transition: 0.3s;
+  resize: none;
+  padding: 10px;
+  font-family: Rubik;
+  color: hsl(212, 52%, 11%);
+}
+.myTextareaReply {
   height: 100% !important;
   min-height: 100px;
   border-radius: 10px;
@@ -113,10 +133,10 @@ input[type="text"]:hover {
   font-family: Rubik;
   color: hsl(212, 24%, 26%);
 }
-.replyClass:hover{
+.replyClass:hover {
   opacity: 0.5;
 }
-.send{
+.send {
   width: 100px;
   border-radius: 8px;
   border: none;
@@ -126,11 +146,90 @@ input[type="text"]:hover {
   background-color: hsl(238, 40%, 52%);
   cursor: pointer;
   transition: 0.3s;
-  
 }
-.send:hover{
+.send:hover {
   opacity: 0.5;
 }
-.send:focus{
+.send:focus {
   outline: none;
+}
+.replies {
+  display: flex;
+  margin: 10px auto;
+  justify-content: end;
+  min-width: 340px;
+  width: 90%;
+  min-height: 150px;
+  border-radius: 12px;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
+}
+.replyArr {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.myWrittenComment {
+  display: flex;
+  margin: 10px auto;
+  min-width: 440px;
+  width: 100%;
+  min-height: 150px;
+  border-radius: 12px;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
+}
+
+.replyClass {
+  font-family: Rubik;
+  font-weight: 500;
+  color: hsl(238, 40%, 52%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.replyClassEdit {
+  color: hsl(238, 40%, 52%);
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: Rubik;
+  font-weight: 500;
+}
+.replyClassEdit:hover {
+  opacity: 0.5;
+}
+.replyClassDelete{
+    font-family: Rubik;
+  font-weight: 500;
+  color: hsl(358, 79%, 66%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.replyClassDelete:hover{
+  opacity: 0.5;
+}
+.myCommentHidden{
+  display: none;
+  margin: 10px auto;
+  justify-content: center;
+  min-width: 340px;
+  width: 100%;
+  min-height: 130px;
+  border-radius: 12px;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
+ 
+}
+.sendReplies{
+    width: 100px;
+  border-radius: 8px;
+  border: none;
+  height: 40px;
+  font-family: Rubik;
+  color: white;
+  background-color: hsl(238, 40%, 52%);
+  cursor: pointer;
+  transition: 0.3s;
 }
