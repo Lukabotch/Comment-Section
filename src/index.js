@@ -162,7 +162,7 @@ ${obj.content}
 });
 
 
-// working on reply button
+// this code makes visible reply form of current div
 let replyClass = document.querySelectorAll(".replyClass")
 replyClass.forEach(replys => replys.addEventListener("click", function (e) {
   if (e.currentTarget.parentNode.parentNode.parentNode.parentNode.nextElementSibling) {
