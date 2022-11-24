@@ -134,7 +134,7 @@ sendCom.addEventListener("click", function (e) {
   myData.comments.push(obj);
   const myCom = document.createElement('div')
   let myComContent = `<div class="replyComments">
-  <div class="comment" id="4">
+  <div class="myCommentWrite" id="4">
         <div class="rating">
           <img src="/images/icon-plus.svg" alt="" class="plus" />
           <span>${obj.score}</span>
